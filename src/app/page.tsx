@@ -138,7 +138,9 @@ export default function HomePage() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <a
-                    href={highlight.href}
+                    // href={highlight.href}
+                    
+                    href = {`${process.env.NODE_ENV === 'production' ? '/shifa-mehreen-portfolio' : ''}${highlight.href}`}
                     className="block h-full hover:no-underline"
                   >
                     <Card className="h-full border-0 shadow-md hover:shadow-xl transition-all duration-300 group overflow-hidden">

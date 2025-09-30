@@ -11,6 +11,8 @@ interface LinkButtonProps {
   external?: boolean
 }
 
+const getBasePath = () => process.env.NODE_ENV === 'production' ? '/shifa-mehreen-portfolio' : ''
+
 export function LinkButton({ 
   href, 
   children, 
@@ -29,9 +31,11 @@ export function LinkButton({
     )
   }
 
+  const fullHref = href.startsWith('http') ? href : `${getBasePath()}${href}`
+
   return (
     <Button variant={variant} size={size} className={cn(className)} asChild>
-      <Link href={href}>
+      <Link href={fullHref}>
         {children}
       </Link>
     </Button>

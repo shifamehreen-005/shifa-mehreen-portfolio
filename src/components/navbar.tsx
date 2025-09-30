@@ -7,6 +7,8 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
+const getBasePath = () => process.env.NODE_ENV === 'production' ? '/shifa-mehreen-portfolio' : ''
+
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Experience", href: "/experience" },
@@ -25,7 +27,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold text-foreground">
+            <Link href={`${getBasePath()}/`} className="text-xl font-bold text-foreground">
               Portfolio
             </Link>
           </div>
