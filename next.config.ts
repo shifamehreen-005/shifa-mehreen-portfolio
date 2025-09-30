@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? 'shifa-mehreen-portfolio' : '',
-  basePath: process.env.NODE_ENV === 'production' ? 'shifa-mehreen-portfolio' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/shifa-mehreen-portfolio' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/shifa-mehreen-portfolio' : '',
 }
 
 export default nextConfig
