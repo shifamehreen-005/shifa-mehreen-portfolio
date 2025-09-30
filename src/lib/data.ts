@@ -118,7 +118,7 @@ export const awards: Award[] = [
     year: '2025',
     description: 'For FeedForward - End-to-End AI for Food Security solution',
     project: 'FeedForward',
-    image: '/images/feedforward-award.jpg'
+    image: `${process.env.NODE_ENV === "production" ? '/shifa-mehreen-portfolio':''}/images/feedforward-award.jpg`
   },
   {
     id: '2',
